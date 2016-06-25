@@ -21,6 +21,9 @@ describe('emoji-search service', () => {
       })
 
       it('fetches to the emoji API with the query', () => {
+        expect(fetch).to.have.been.calledOnce.calledWith(
+          `http://emoji.getdango.com/api/emoji?q=${query}`
+        )
       })
 
     })
