@@ -1,5 +1,6 @@
 import './requires/chai-extensions'
 import Promise from 'bluebird'
+import 'whatwg-fetch'
 
 Promise.config({
   warnings : false // turn off warnings during test, since it throws when faking server

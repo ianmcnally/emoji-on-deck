@@ -58,13 +58,16 @@ var config = {
 }
 
 var buildConfig = assign({}, config, {
-  entry : [PATHS.SOURCE + '/index.js']
+  entry : [
+    'whatwg-fetch',
+    PATHS.SOURCE + '/index.js'
+  ]
 })
 
 var devConfig = assign({}, buildConfig, {
-  entry : [
+  entry : buildConfig.entry.concat([
     'webpack-hot-middleware/client'
-  ].concat(buildConfig.entry),
+  ]),
   plugins : [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

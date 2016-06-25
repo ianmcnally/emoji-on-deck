@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Emojis, Search } from 'src/components'
 import { getEmojisForQuery } from 'src/services/emoji-search'
-import 'whatwg-fetch'
 import './app.css'
 
 const initialState = { emojis : [] }
