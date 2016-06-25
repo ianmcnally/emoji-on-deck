@@ -8,7 +8,7 @@
     "compile": "npm run compile:clean && npm run compile:indexhtml && npm run compile:assets",
     "compile:clean": "rm -f {index.html,main.js,main.css}",
     "compile:indexhtml": "cp src/index.html .",
-    "compile:assets": "webpack",
+    "compile:assets": "NODE_ENV=production webpack",
     "deploy": "npm run deploy:build && npm run deploy:commit && npm run deploy:push && npm run deploy:cleanup",
     "deploy:build": "git branch -D gh-pages && git checkout -b gh-pages && npm run compile && git add -f index.html main.js main.css",
     "deploy:commit": "git commit -a -m $npm_package_version",
