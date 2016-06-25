@@ -21,3 +21,7 @@ Codepen demo: http://codepen.io/ianmcnally/pen/mERmEy/
 ## Linting
 
 - `npm run lint` - Run linting with JSCS and ESLint
+
+## Deployment
+
+- `npm run compile` - Compiles all static assets

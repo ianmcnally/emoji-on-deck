@@ -5,6 +5,10 @@
   "main": "app/index.js",
   "scripts": {
     "ci": "npm run lint && npm run test:travisci",
+    "compile": "npm run compile:clean && npm run compile:indexhtml && npm run compile:assets",
+    "compile:clean": "rm -f {index.html,main.js,main.css}",
+    "compile:indexhtml": "cp src/index.html .",
+    "compile:assets": "webpack",
     "lint": "eslint --ext .jsx,.js dev-server src && jscs -x dev-server src",
     "start": "env NODE_ENV=development node dev-server",
     "test": "env NODE_ENV=test karma start karma.conf.js",

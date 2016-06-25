@@ -6,14 +6,14 @@ var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var PATHS = {
-  OUTPUT : path.join(__dirname, 'dist'),
+  OUTPUT : __dirname,
   SOURCE : path.join(__dirname, 'src')
 }
 
 var config = {
   output : {
     path : PATHS.OUTPUT,
-    publicPath : '/static/',
+    publicPath : '/',
     filename : 'main.js'
   },
   module : {
@@ -43,7 +43,7 @@ var config = {
     }
   },
   plugins : [
-    new ExtractTextPlugin('style.css', { allChunks : true }),
+    new ExtractTextPlugin('main.css', { allChunks : true }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV' : JSON.stringify(process.env.NODE_ENV)
     }),
@@ -71,10 +71,7 @@ var devConfig = assign({}, buildConfig, {
   ].concat(buildConfig.plugins)
 })
 
-module.exports = {
-  buildConfig : buildConfig,
-  devConfig : devConfig
-}
+module.exports = buildConfig;
+module.exports.devConfig = devConfig;
 
 /* eslint-enable no-var,object-shorthand,prefer-template */
-

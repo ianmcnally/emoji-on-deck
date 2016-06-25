@@ -1,6 +1,6 @@
 /* eslint-disable no-var */
 
-var webpackConfig = require('./webpack.config').buildConfig
+var webpackConfig = require('./webpack.config')
 
 module.exports = function (config) {
   config.set({
