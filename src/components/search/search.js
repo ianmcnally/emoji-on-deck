@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react'
+import styles from './search.css'
 
 const Search = ({ onChange }) =>
   <input
+    className={styles.input}
     onChange={onChange}
     type='text'
-    placeholder='Search emojis by description'
+    placeholder='Find emojis by description'
   />
 
 Search.propTypes = {

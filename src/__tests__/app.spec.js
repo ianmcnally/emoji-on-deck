@@ -87,5 +87,41 @@ describe('App', () => {
 
   })
 
+  context('when <Search> input is cleared', () => {
+    const searchTerm = ''
+    const event = { target : { value : searchTerm } }
+    let component
+
+    before(done => {
+      stub(emojiSearch, 'getEmojisForQuery').returns(Promise.resolve())
+
+      const { output, rerender } = renderShallow(<App />)
+      const searchInput = findWithType(output, Search)
+
+      searchInput.props.onChange(event)
+
+      setTimeout(() => {
+        component = rerender()
+        done()
+      }, 0)
+    })
+
+    after(() => {
+      emojiSearch.getEmojisForQuery.restore()
+    })
+
+    // fix: setup state with emojis to prove its cleared
+    it('renders <Emojis> with an empty emojis array', () => {
+      expect(component).to.include(
+        <Emojis emojis={[]} />
+      )
+    })
+
+    it('does not query for emojis', () => {
+      expect(emojiSearch.getEmojisForQuery).not.to.have.been.called
+    })
+
+  })
+
 })
 

@@ -1,0 +1,19 @@
+.list-container {
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.item-wrapper {
+  display: inline-block;
+  max-width: 3rem;
+  overflow: hidden;
+  margin: 0 .5rem;
+}
+
+.item {
+  appearance: none;
+  border: none;
+  font-size: 3rem;
+}

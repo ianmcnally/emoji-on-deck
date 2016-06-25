@@ -1,5 +1,6 @@
 import React from 'react'
 import Emojis from '../emojis'
+import styles from '../emojis.css'
 import { expect } from 'chai'
 import renderShallow from 'src/test-helpers/lib/render-shallow'
 
@@ -15,9 +16,11 @@ describe('<Emojis />', () => {
 
     it('renders a list item and input for each emoji', () => {
       expect(component).to.be.eql(
-        <ul>
+        <ul className={styles.listContainer}>
         {emojis.map(emoji =>
-          <li key={emoji}><input type='text' readOnly value={emoji} /></li>
+          <li className={styles.itemWrapper} key={emoji}>
+            <input className={styles.item} type='text' readOnly value={emoji} />
+          </li>
         )}
         </ul>
       )
