@@ -1,6 +1,6 @@
 An emoji search bar, with easy navigation and copying.
 
-Codepen demo: http://codepen.io/ianmcnally/pen/mERmEy/
+[emoji.ianmcnally.me](http://emoji.ianmcnally.me)
 
 ## Setup
 
