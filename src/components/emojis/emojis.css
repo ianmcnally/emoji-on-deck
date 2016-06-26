@@ -9,11 +9,13 @@
   display: inline-block;
   max-width: 3rem;
   overflow: hidden;
-  margin: 0 .5rem;
+  margin: 0 .2rem;
 }
 
 .item {
   appearance: none;
   border: none;
   font-size: 3rem;
+  padding: 0;
+  margin: 0;
 }
