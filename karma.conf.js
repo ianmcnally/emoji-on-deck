@@ -8,7 +8,7 @@ module.exports = function (config) {
     frameworks : ['mocha'],
     files : [
       {
-        pattern : 'src/test-helpers/test-index.js',
+        pattern : 'lib/test-helpers/test-index.js',
         watched : false,
         included : true,
         served : true
@@ -22,7 +22,7 @@ module.exports = function (config) {
       noInfo: true
     },
     preprocessors : {
-      'src/test-helpers/test-index.js' : ['webpack']
+      'lib/test-helpers/test-index.js' : ['webpack']
     },
     reporters : ['mocha', 'notify'],
     port : 9876,

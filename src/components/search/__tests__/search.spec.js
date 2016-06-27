@@ -3,7 +3,7 @@ import Search from '../search'
 import styles from '../search.css'
 import { spy } from 'sinon'
 import { expect } from 'chai'
-import renderShallow from 'src/test-helpers/lib/render-shallow'
+import renderShallow from 'lib/test-helpers/render-shallow'
 
 describe('<Search>', () => {
 
