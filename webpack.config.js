@@ -76,7 +76,12 @@ var devConfig = assign({}, buildConfig, {
   ].concat(buildConfig.plugins)
 })
 
-module.exports = buildConfig;
-module.exports.devConfig = devConfig;
+var testConfig = assign({}, buildConfig, {
+  devtool: 'inline-source-map'
+})
+
+module.exports = buildConfig
+module.exports.devConfig = devConfig
+module.exports.testConfig = testConfig
 
 /* eslint-enable no-var,object-shorthand,prefer-template */
