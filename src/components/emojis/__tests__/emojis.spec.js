@@ -2,7 +2,7 @@ import React from 'react'
 import Emojis from '../emojis'
 import styles from '../emojis.css'
 import { expect } from 'chai'
-import renderShallow from 'lib/test-helpers/render-shallow'
+import renderShallow from 'render-shallow'
 
 describe('<Emojis />', () => {
 
