@@ -4,6 +4,8 @@ An emoji search bar, with easy navigation and copying.
 
 ## Setup
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ianmcnally/emoji-on-deck.svg)](https://greenkeeper.io/)
+
 - `npm install` - Installs all dependencies
 
 ## Development
